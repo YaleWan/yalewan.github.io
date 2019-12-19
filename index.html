@@ -1381,6 +1381,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/js%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yhwang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="王亚晖的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/blog/2019/10/14/js%E7%BB%A7%E6%89%BF/" itemprop="url">js继承</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-14T10:17:05+08:00">
+                2019-10-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="js继承"><a href="#js继承" class="headerlink" title="js继承"></a>js继承</h1><p>  <strong>类式继承</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.hobby = [<span class="string">'swim'</span>,<span class="string">'smoke'</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.sonName = <span class="string">'wang'</span></span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line"><span class="keyword">let</span> son = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son.sonName)</span><br><span class="line"><span class="built_in">console</span>.log(son.hobby)</span><br></pre></td></tr></table></figure>
+
+<p>  类式继承有个致命的缺点，当其中一个实例被修改时候，另一个实例也跟着对应的修改了,</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> son2 = <span class="keyword">new</span> Son()</span><br><span class="line">son2.hobby.push(<span class="string">'sleep'</span>)</span><br><span class="line">son.hobby <span class="comment">// ['swim','smoke','sleep']</span></span><br></pre></td></tr></table></figure>
+
+<p>  <strong>构造函数继承</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.books = [<span class="string">'javascript'</span>,<span class="string">'html'</span>,<span class="string">'css'</span>]</span><br><span class="line">  <span class="keyword">this</span>.id = id;  </span><br><span class="line">&#125;</span><br><span class="line">SuperClass.prototype.showBooks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.books)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  SuperClass.call(<span class="keyword">this</span>,id)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> instatncel = <span class="keyword">new</span> SubClass(<span class="number">10</span>) ;</span><br><span class="line"><span class="keyword">var</span> instance2=<span class="keyword">new</span> SubClass(<span class="number">11</span>)</span><br><span class="line">instancel.books.push(<span class="string">'vue'</span>)<span class="comment">//['javascript','html','css','vue']</span></span><br><span class="line">instance2.books <span class="comment">//[javascript,html,css]</span></span><br><span class="line">instancel.showBooks() <span class="comment">//typeError</span></span><br></pre></td></tr></table></figure>
+
+<p>  由于call方法可以更改函数的作用环境，因此在子类中，对superclass调用这个方法就是将子类中的变量在父类中执行一遍，但是这种类型的继承没有设计原型prototype，所有父类的原型方法自然不会被子类继承。</p>
+<p>  <strong>组合继承</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'zhangsan'</span></span><br><span class="line">  <span class="keyword">this</span>.books = [</span><br><span class="line">    <span class="string">'css'</span>,</span><br><span class="line">    <span class="string">'javascript'</span>,</span><br><span class="line">    <span class="string">'html'</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">SuperClass.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  SuperClass.call(<span class="keyword">this</span>)</span><br><span class="line">  <span class="keyword">this</span>.id = id</span><br><span class="line">&#125;</span><br><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass()</span><br><span class="line"><span class="keyword">let</span> instance1 = <span class="keyword">new</span> SubClass(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">let</span> instance2 = <span class="keyword">new</span> SubClass(<span class="number">2</span>)</span><br><span class="line">instance1.books.push(<span class="string">'vue'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(instance1.books)<span class="comment">//['css','javascript','html','vue']</span></span><br><span class="line"><span class="built_in">console</span>.log(instance2.books)<span class="comment">//['css','javascript','html']</span></span><br><span class="line">instance1.getName()<span class="comment">//'zhangsan'</span></span><br></pre></td></tr></table></figure>
+
+<p>  组合模式就是将这两点的优势结合起来。</p>
+<p>  <strong>原型式继承</strong></p>
+<p>  ​</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/js%E5%8E%9F%E7%90%86%E9%A2%98%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1506,163 +1663,6 @@
 <h2 id="19-实现一个节流函数"><a href="#19-实现一个节流函数" class="headerlink" title="19. 实现一个节流函数"></a>19. 实现一个节流函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span> (<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 利用闭包保存时间</span></span><br><span class="line">  <span class="keyword">let</span> prev = <span class="built_in">Date</span>.now()</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> context = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">let</span> arg = <span class="built_in">arguments</span></span><br><span class="line">    <span class="keyword">let</span> now = <span class="built_in">Date</span>.now()</span><br><span class="line">    <span class="keyword">if</span> (now - prev &gt;= delay) &#123;</span><br><span class="line">      fn.apply(context, arg)</span><br><span class="line">      prev = <span class="built_in">Date</span>.now()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'节流'</span>)</span><br><span class="line">&#125;</span><br><span class="line">addEventListener(<span class="string">'scroll'</span>, throttle(fn, <span class="number">1000</span>))</span><br></pre></td></tr></table></figure>
 <h2 id="20-实现一个防抖函数"><a href="#20-实现一个防抖函数" class="headerlink" title="20. 实现一个防抖函数"></a>20. 实现一个防抖函数</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span> (<span class="params">fn, delay</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 利用闭包保存定时器</span></span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> context = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">let</span> arg = <span class="built_in">arguments</span></span><br><span class="line">    <span class="comment">// 在规定时间内再次触发会先清除定时器后再重设定时器</span></span><br><span class="line">    clearTimeout(timer)</span><br><span class="line">    timer = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      fn.apply(context, arg)</span><br><span class="line">    &#125;, delay)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'防抖'</span>)</span><br><span class="line">&#125;</span><br><span class="line">addEventListener(<span class="string">'scroll'</span>, debounce(fn, <span class="number">1000</span>))</span><br></pre></td></tr></table></figure>
 
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/js%E7%BB%A7%E6%89%BF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yhwang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="王亚晖的个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/blog/2019/10/14/js%E7%BB%A7%E6%89%BF/" itemprop="url">js继承</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-14T10:17:05+08:00">
-                2019-10-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="js继承"><a href="#js继承" class="headerlink" title="js继承"></a>js继承</h1><p>  <strong>类式继承</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.hobby = [<span class="string">'swim'</span>,<span class="string">'smoke'</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.sonName = <span class="string">'wang'</span></span><br><span class="line">&#125;</span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line"><span class="keyword">let</span> son = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son.sonName)</span><br><span class="line"><span class="built_in">console</span>.log(son.hobby)</span><br></pre></td></tr></table></figure>
-
-<p>  类式继承有个致命的缺点，当其中一个实例被修改时候，另一个实例也跟着对应的修改了,</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> son2 = <span class="keyword">new</span> Son()</span><br><span class="line">son2.hobby.push(<span class="string">'sleep'</span>)</span><br><span class="line">son.hobby <span class="comment">// ['swim','smoke','sleep']</span></span><br></pre></td></tr></table></figure>
-
-<p>  <strong>构造函数继承</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.books = [<span class="string">'javascript'</span>,<span class="string">'html'</span>,<span class="string">'css'</span>]</span><br><span class="line">  <span class="keyword">this</span>.id = id;  </span><br><span class="line">&#125;</span><br><span class="line">SuperClass.prototype.showBooks = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.books)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  SuperClass.call(<span class="keyword">this</span>,id)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> instatncel = <span class="keyword">new</span> SubClass(<span class="number">10</span>) ;</span><br><span class="line"><span class="keyword">var</span> instance2=<span class="keyword">new</span> SubClass(<span class="number">11</span>)</span><br><span class="line">instancel.books.push(<span class="string">'vue'</span>)<span class="comment">//['javascript','html','css','vue']</span></span><br><span class="line">instance2.books <span class="comment">//[javascript,html,css]</span></span><br><span class="line">instancel.showBooks() <span class="comment">//typeError</span></span><br></pre></td></tr></table></figure>
-
-<p>  由于call方法可以更改函数的作用环境，因此在子类中，对superclass调用这个方法就是将子类中的变量在父类中执行一遍，但是这种类型的继承没有设计原型prototype，所有父类的原型方法自然不会被子类继承。</p>
-<p>  <strong>组合继承</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'zhangsan'</span></span><br><span class="line">  <span class="keyword">this</span>.books = [</span><br><span class="line">    <span class="string">'css'</span>,</span><br><span class="line">    <span class="string">'javascript'</span>,</span><br><span class="line">    <span class="string">'html'</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">SuperClass.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubClass</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">  SuperClass.call(<span class="keyword">this</span>)</span><br><span class="line">  <span class="keyword">this</span>.id = id</span><br><span class="line">&#125;</span><br><span class="line">SubClass.prototype = <span class="keyword">new</span> SuperClass()</span><br><span class="line"><span class="keyword">let</span> instance1 = <span class="keyword">new</span> SubClass(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">let</span> instance2 = <span class="keyword">new</span> SubClass(<span class="number">2</span>)</span><br><span class="line">instance1.books.push(<span class="string">'vue'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(instance1.books)<span class="comment">//['css','javascript','html','vue']</span></span><br><span class="line"><span class="built_in">console</span>.log(instance2.books)<span class="comment">//['css','javascript','html']</span></span><br><span class="line">instance1.getName()<span class="comment">//'zhangsan'</span></span><br></pre></td></tr></table></figure>
-
-<p>  组合模式就是将这两点的优势结合起来。</p>
-<p>  <strong>原型式继承</strong></p>
-<p>  ​</p>
 
           
         
