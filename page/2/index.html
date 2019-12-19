@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/js%E4%BC%98%E9%9B%85%E5%86%99%E6%B3%95%E6%80%BB%E7%BB%93/">
+    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yhwang">
@@ -261,7 +261,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2019/10/14/js%E4%BC%98%E9%9B%85%E5%86%99%E6%B3%95%E6%80%BB%E7%BB%93/" itemprop="url">js 优雅写法总结</a></h1>
+                <a class="post-title-link" href="/blog/2019/10/14/flex%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80/" itemprop="url">flex弹性布局</a></h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">javascript</span>
+                  <a href="/blog/categories/html/" itemprop="url" rel="index">
+                    <span itemprop="name">html</span>
                   </a>
                 </span>
 
@@ -335,15 +335,30 @@
       
         
           
-            <h1 id="js优雅写法"><a href="#js优雅写法" class="headerlink" title="js优雅写法"></a>js优雅写法</h1><ul>
-<li><p>封装多个函数</p>
-<p>传统写法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkName</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkEmail</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkPassword</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">.....</span><br></pre></td></tr></table></figure>
-
-<p>优雅写法</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> checkType = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.addCheck = <span class="function">(<span class="params">type ,fn</span>) =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>[type] = fn;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> check = <span class="keyword">new</span> checkType()</span><br><span class="line"></span><br><span class="line">check.addCheck(<span class="string">'checkName'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'this is checkName'</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;).addCheck(<span class="string">'checkPsw'</span>,()=&gt;&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'this is checkPsw'</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;)</span><br><span class="line">a.checkName().checkPsw()</span><br></pre></td></tr></table></figure>
-
-</li>
+            <h1 id="flex弹性布局"><a href="#flex弹性布局" class="headerlink" title="flex弹性布局"></a>flex弹性布局</h1><p>flex 弹性盒子模型声明 <code>display:flex</code>，那么这个元素就成为了弹性容器，具有flex弹性布局的特性。</p>
+<ol>
+<li>每个弹性容器都有两根轴：<strong>主轴和交叉轴</strong>，两轴之间成90度关系。注意：<strong>水平的不一定就是主轴。</strong></li>
+<li>每根轴都有<strong>起点和终点</strong>，这对于元素的对齐非常重要。</li>
+<li>弹性容器中的所有子元素称为&lt;弹性元素&gt;，<strong>弹性元素永远沿主轴排列</strong>。</li>
+<li>弹性元素也可以通过<code>display:flex</code>设置为另一个弹性容器，形成嵌套关系。因此<strong>一个元素既可以是弹性容器也可以是弹性元素</strong>。</li>
+</ol>
+<p><strong>容器属性</strong></p>
+<ul>
+<li>flex-flow</li>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>algin-content</li>
+</ul>
+<p><strong>元素属性</strong></p>
+<ul>
+<li>order</li>
+<li>flex-grow</li>
+<li>flex-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
 </ul>
 
           
