@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="alg," />
 
 
 
@@ -79,15 +79,16 @@
 
 
 
-<meta name="description" content="1 安装相关的服务器文件 apache-tomcat jdk      windows&#x2F;linux具体看服务器是什么 putty    对远程服务器进行操作 FileZilla   对服务器文件进行copy   2 FileZilla 输入主机地址，用户名，密码进行登录（密码一般是服务器注册是输入的密码） 进行文件的上传  3 putty 进入远程服务器 输入账号密码进行登录 ll查看文件目录">
+<meta name="description" content="JavaScript中打乱数组排序 利用sort()函数 1arr.sort(()&#x3D;&gt;Math.random() - 0.5)  但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。  Fisher-Yates shuffle(洗牌算法) 1234567function shuffle(arr) &amp;#123;  let">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1 安装相关的服务器文件">
-<meta property="og:url" content="https:&#x2F;&#x2F;yalewan.github.io&#x2F;blog&#x2F;2019&#x2F;10&#x2F;14&#x2F;1%20%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6&#x2F;index.html">
+<meta property="og:title" content="JavaScript中打乱数组排序">
+<meta property="og:url" content="https:&#x2F;&#x2F;yalewan.github.io&#x2F;blog&#x2F;2019&#x2F;10&#x2F;14&#x2F;JavaScript%E4%B8%AD%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84%E9%9A%8F%E6%9C%BA%E6%8E%92%E5%BA%8F&#x2F;index.html">
 <meta property="og:site_name" content="王亚晖的个人博客">
-<meta property="og:description" content="1 安装相关的服务器文件 apache-tomcat jdk      windows&#x2F;linux具体看服务器是什么 putty    对远程服务器进行操作 FileZilla   对服务器文件进行copy   2 FileZilla 输入主机地址，用户名，密码进行登录（密码一般是服务器注册是输入的密码） 进行文件的上传  3 putty 进入远程服务器 输入账号密码进行登录 ll查看文件目录">
-<meta property="article:published_time" content="2019-10-14T02:17:05.331Z">
-<meta property="article:modified_time" content="2019-10-14T02:17:05.332Z">
+<meta property="og:description" content="JavaScript中打乱数组排序 利用sort()函数 1arr.sort(()&#x3D;&gt;Math.random() - 0.5)  但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。  Fisher-Yates shuffle(洗牌算法) 1234567function shuffle(arr) &amp;#123;  let">
+<meta property="article:published_time" content="2019-10-14T02:17:05.328Z">
+<meta property="article:modified_time" content="2019-12-19T05:10:43.629Z">
 <meta property="article:author" content="wangyahui">
+<meta property="article:tag" content="alg">
 <meta name="twitter:card" content="summary">
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://yalewan.github.io/blog/2019/10/14/1 安装相关的服务器文件/"/>
+  <link rel="canonical" href="https://yalewan.github.io/blog/2019/10/14/JavaScript中打乱数组随机排序/"/>
 
 
 
 
 
-  <title>1 安装相关的服务器文件 | 王亚晖的个人博客</title>
+  <title>JavaScript中打乱数组排序 | 王亚晖的个人博客</title>
   
 
 
@@ -243,7 +244,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/1%20%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6/">
+    <link itemprop="mainEntityOfPage" href="https://yalewan.github.io/blog/blog/2019/10/14/JavaScript%E4%B8%AD%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84%E9%9A%8F%E6%9C%BA%E6%8E%92%E5%BA%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wangyahui">
@@ -260,7 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">1 安装相关的服务器文件</h1>
+          <h1 class="post-title" itemprop="name headline">JavaScript中打乱数组排序</h1>
         
 
         <div class="post-meta">
@@ -283,6 +284,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/alg/" itemprop="url" rel="index">
+                    <span itemprop="name">alg</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -291,9 +314,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2019/10/14/1%20%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6/#comments" itemprop="discussionUrl">
+                <a href="/blog/2019/10/14/JavaScript%E4%B8%AD%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84%E9%9A%8F%E6%9C%BA%E6%8E%92%E5%BA%8F/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/10/14/1 安装相关的服务器文件/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/10/14/JavaScript中打乱数组随机排序/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -321,39 +344,19 @@
       
 
       
-        <h3 id="1-安装相关的服务器文件"><a href="#1-安装相关的服务器文件" class="headerlink" title="1 安装相关的服务器文件"></a>1 安装相关的服务器文件</h3><ul>
-<li>apache-tomcat</li>
-<li>jdk      windows/linux具体看服务器是什么</li>
-<li>putty    对远程服务器进行操作</li>
-<li>FileZilla   对服务器文件进行copy </li>
-</ul>
-<h3 id="2-FileZilla"><a href="#2-FileZilla" class="headerlink" title="2 FileZilla"></a>2 FileZilla</h3><ul>
-<li>输入主机地址，用户名，密码进行登录（密码一般是服务器注册是输入的密码）</li>
-<li>进行文件的上传</li>
-</ul>
-<h3 id="3-putty"><a href="#3-putty" class="headerlink" title="3 putty"></a>3 putty</h3><ul>
-<li>进入远程服务器</li>
-<li>输入账号密码进行登录</li>
-<li><code>ll</code>查看文件目录</li>
-</ul>
-<h3 id="部署项目"><a href="#部署项目" class="headerlink" title="部署项目"></a>部署项目</h3><ul>
-<li>打包自己的项目，例如vue项目<code>npm run build</code>将打包好的dist解压放在服务器中tomcat下的webapps下</li>
-<li>解压自己的项目</li>
-<li>.tar.gz的解压命令为<code>tar -zxvf</code>加文件名</li>
-</ul>
-<ul>
-<li>.zip的解压命令为<code>unzip</code>加文件名，<strong>提示</strong>一般linux中没有unzip的命令 需<code>apt-get install unzip</code></li>
-</ul>
-<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ul>
-<li>一般项目放在/user/local下</li>
-<li>需要在阿里云服务器上开放端口8080</li>
-<li>需要配置环境变量 <code>vi /etc/profile</code></li>
-<li>从网上拉取文件的命令<code>wget 加地址</code></li>
-<li><code>source /etc/profile</code>使配置立即生效</li>
-</ul>
-<h3 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h3><ul>
-<li>下载对应的版本</li>
-<li>做软连接</li>
+        <h1 id="JavaScript中打乱数组排序"><a href="#JavaScript中打乱数组排序" class="headerlink" title="JavaScript中打乱数组排序"></a>JavaScript中打乱数组排序</h1><ul>
+<li><p>利用sort()函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.sort(<span class="function"><span class="params">()</span>=&gt;</span><span class="built_in">Math</span>.random() - <span class="number">0.5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。</p>
+</li>
+<li><p>Fisher-Yates shuffle(洗牌算法)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> i = arr.length;</span><br><span class="line">  <span class="keyword">while</span> (i) &#123;</span><br><span class="line">    <span class="keyword">let</span> j = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * i--);</span><br><span class="line">    [arr[j], arr[i]] = [arr[i], arr[j]];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">_, idx</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> targetIdx = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * arr.length)</span><br><span class="line">        ;[arr[idx], arr[targetIdx]] = [arr[targetIdx], arr[idx]]</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果要将数组随机排序，目前而言，Fisher–Yates shuffle 算法应该是最好的选择。</p>
+</li>
 </ul>
 
       
@@ -370,6 +373,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/blog/tags/alg/" rel="tag"># alg</a>
+          
+        </div>
+      
 
       
       
@@ -379,8 +388,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2019/10/14/react%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E4%BA%8C/" rel="next" title="react的基本使用二">
-                <i class="fa fa-chevron-left"></i> react的基本使用二
+              <a href="/blog/2019/10/14/%E5%86%99%E4%B8%80%E4%B8%AAsleep(%E6%9A%82%E5%81%9C)%E5%87%BD%E6%95%B0/" rel="next" title="写一个sleep(暂停)函数">
+                <i class="fa fa-chevron-left"></i> 写一个sleep(暂停)函数
               </a>
             
           </div>
@@ -389,8 +398,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2019/10/14/git/" rel="prev" title="git">
-                git <i class="fa fa-chevron-right"></i>
+              <a href="/blog/2019/10/14/%E7%94%A8%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0%EF%BC%8C%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6%E4%B8%BA5%E4%B8%94%E5%85%83%E7%B4%A0%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%9C%A82-32%E9%97%B4%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%80%BC/" rel="prev" title="用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值">
+                用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -559,7 +568,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装相关的服务器文件"><span class="nav-number">1.</span> <span class="nav-text">1 安装相关的服务器文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-FileZilla"><span class="nav-number">2.</span> <span class="nav-text">2 FileZilla</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-putty"><span class="nav-number">3.</span> <span class="nav-text">3 putty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署项目"><span class="nav-number">4.</span> <span class="nav-text">部署项目</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充说明"><span class="nav-number"></span> <span class="nav-text">补充说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装node"><span class="nav-number">1.</span> <span class="nav-text">安装node</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript中打乱数组排序"><span class="nav-number">1.</span> <span class="nav-text">JavaScript中打乱数组排序</span></a></li></ol></div>
             
 
           </div>
@@ -730,9 +739,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://yalewan.github.io/blog/2019/10/14/1%20%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%96%87%E4%BB%B6/';
-          this.page.identifier = '2019/10/14/1 安装相关的服务器文件/';
-          this.page.title = '1 安装相关的服务器文件';
+          this.page.url = 'https://yalewan.github.io/blog/2019/10/14/JavaScript%E4%B8%AD%E6%89%93%E4%B9%B1%E6%95%B0%E7%BB%84%E9%9A%8F%E6%9C%BA%E6%8E%92%E5%BA%8F/';
+          this.page.identifier = '2019/10/14/JavaScript中打乱数组随机排序/';
+          this.page.title = 'JavaScript中打乱数组排序';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://yalewan.disqus.com/embed.js';
