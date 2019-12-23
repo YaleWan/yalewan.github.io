@@ -718,22 +718,26 @@ git reset 的作用是修改HEAD的位置，即将HEAD指向的位置 改变为�
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/14/shi-yong-vue.observable-jin-xing-zhuang-tai-guan-li/">
+                <a href="/2019/10/14/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="使用Vue.observable()进行状态管理">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="总线bus解决兄弟组件传值">
                         
-                        <span class="card-title">使用Vue.observable()进行状态管理</span>
+                        <span class="card-title">总线bus解决兄弟组件传值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Vue.observable()进行状态管理Vue.observable(object)是vue.js 2.6新增加的一个api，通过这个api我们可以应对一些简单的跨组件数据状态共享的情况。
-来看一下实际应用：
-
-首先先创建一个sto
+                            事件总线bus解决兄弟组件之间的传值实际运用：
+封装一个Bus.js
+import Vue from 'vue'
+const Bus = new Vue()
+export default Bus 
+在组件调用时引入
+组件一：
+import 
                         
                     </div>
                     <div class="publish-info">
@@ -742,23 +746,11 @@ git reset 的作用是修改HEAD的位置，即将HEAD指向的位置 改变为�
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/vue/" class="post-category">
-                                    vue
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            yhwang
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
-                    </a>
-                    
                 </div>
                 
             </div>

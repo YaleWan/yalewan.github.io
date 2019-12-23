@@ -718,22 +718,26 @@ function sleep(milliseconds: num">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/10/14/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/">
+                <a href="/2019/10/14/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JavaScript中打乱数组排序">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值">
                         
-                        <span class="card-title">JavaScript中打乱数组排序</span>
+                        <span class="card-title">用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript中打乱数组排序
-利用sort()函数
-arr.sort(()=>Math.random() - 0.5)
-但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回
+                            写一个方法去掉字符串中的空格
+写一个方法去掉字符串中的空格
+要求传入不同的类型分别能去掉前、后、前后、中间的空格
+
+const str = '  s t  r  '
+
+const POSITION = Object.freeze({
+  l
                         
                     </div>
                     <div class="publish-info">
@@ -770,26 +774,21 @@ arr.sort(()=>Math.random() - 0.5)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/10/14/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
+                <a href="/2019/10/14/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="找出字符串中连续出现最多的字符和个数">
                         
-                        <span class="card-title">用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</span>
+                        <span class="card-title">找出字符串中连续出现最多的字符和个数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            写一个方法去掉字符串中的空格
-写一个方法去掉字符串中的空格
-要求传入不同的类型分别能去掉前、后、前后、中间的空格
-
-const str = '  s t  r  '
-
-const POSITION = Object.freeze({
-  l
+                            找出字符串中连续出现最多的字符和个数const arr = str.match(/(\w)\1*/g);
+const maxLen = Math.max(...arr.map(s => s.length));
+const result = 
                         
                     </div>
                     <div class="publish-info">
