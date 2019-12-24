@@ -785,21 +785,23 @@ console<span class="token punctuation">.</span><span class="token function">log<
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/">
+                <a href="/2019/12/23/yong-di-gui-suan-fa-shi-xian-shu-zu-chang-du-wei-5-qie-yuan-su-de-sui-ji-shu-zai-2-32-jian-bu-chong-fu-de-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="找出字符串中连续出现最多的字符和个数">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值">
                         
-                        <span class="card-title">找出字符串中连续出现最多的字符和个数</span>
+                        <span class="card-title">用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            找出字符串中连续出现最多的字符和个数const arr = str.match(/(\w)\1*/g);
-const maxLen = Math.max(...arr.map(s => s.length));
-const result = 
+                            用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值描述：
+
+生成一个长度为5的空数组arr
+生成一个（2－32）之间的随机整数rand
+把随机数rand插入到数组arr内，如果数组arr内已存在与rand相同的数字，则重新生成
                         
                     </div>
                     <div class="publish-info">
@@ -836,22 +838,26 @@ const result =
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/23/shi-yong-vue.observable-jin-xing-zhuang-tai-guan-li/">
+                <a href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="使用Vue.observable()进行状态管理">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="总线bus解决兄弟组件传值">
                         
-                        <span class="card-title">使用Vue.observable()进行状态管理</span>
+                        <span class="card-title">总线bus解决兄弟组件传值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用Vue.observable()进行状态管理Vue.observable(object)是vue.js 2.6新增加的一个api，通过这个api我们可以应对一些简单的跨组件数据状态共享的情况。
-来看一下实际应用：
-
-首先先创建一个sto
+                            事件总线bus解决兄弟组件之间的传值实际运用：
+封装一个Bus.js
+import Vue from 'vue'
+const Bus = new Vue()
+export default Bus 
+在组件调用时引入
+组件一：
+import 
                         
                     </div>
                     <div class="publish-info">
@@ -860,23 +866,11 @@ const result =
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/vue/" class="post-category">
-                                    vue
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            yhwang
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
-                    </a>
-                    
                 </div>
                 
             </div>
