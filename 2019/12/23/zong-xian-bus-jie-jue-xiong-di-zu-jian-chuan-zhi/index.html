@@ -778,26 +778,21 @@ import ">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/23/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
+                <a href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="去字符串中空格">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="找出字符串中连续出现最多的字符和个数">
                         
-                        <span class="card-title">去字符串中空格</span>
+                        <span class="card-title">找出字符串中连续出现最多的字符和个数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            写一个方法去掉字符串中的空格
-写一个方法去掉字符串中的空格
-要求传入不同的类型分别能去掉前、后、前后、中间的空格
-
-const str = '  s t  r  '
-
-const POSITION = Object.freeze({
-  l
+                            找出字符串中连续出现最多的字符和个数const arr = str.match(/(\w)\1*/g);
+const maxLen = Math.max(...arr.map(s => s.length));
+const result = 
                         
                     </div>
                     <div class="publish-info">
@@ -834,21 +829,22 @@ const POSITION = Object.freeze({
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/">
+                <a href="/2019/12/23/shi-yong-vue.observable-jin-xing-zhuang-tai-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="找出字符串中连续出现最多的字符和个数">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="使用Vue.observable进行状态管理">
                         
-                        <span class="card-title">找出字符串中连续出现最多的字符和个数</span>
+                        <span class="card-title">使用Vue.observable进行状态管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            找出字符串中连续出现最多的字符和个数const arr = str.match(/(\w)\1*/g);
-const maxLen = Math.max(...arr.map(s => s.length));
-const result = 
+                            使用Vue.observable()进行状态管理Vue.observable(object)是vue.js 2.6新增加的一个api，通过这个api我们可以应对一些简单的跨组件数据状态共享的情况。
+来看一下实际应用：
+
+首先先创建一个sto
                         
                     </div>
                     <div class="publish-info">
@@ -859,8 +855,8 @@ const result =
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/alg/" class="post-category">
-                                    alg
+                            <a href="/categories/vue/" class="post-category">
+                                    vue
                                 </a>
                             
                             
@@ -870,8 +866,8 @@ const result =
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/alg/">
-                        <span class="chip bg-color">alg</span>
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
