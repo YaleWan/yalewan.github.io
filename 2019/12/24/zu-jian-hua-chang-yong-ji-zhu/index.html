@@ -4,9 +4,14 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="测试自动部署, 王亚晖的个人博客">
-    <meta name="description" content="测试自动部署
-">
+    <meta name="keywords" content="Vue组件化常用技术, 王亚晖的个人博客">
+    <meta name="description" content="Vue组件化常用技术组件传值、通信父组件 =&amp;gt; 子组件:
+属性props 
+
+// child
+props: { msg: String }
+// parent
+&amp;lt;HelloWorld msg=&#34;Welcome to Your ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>测试自动部署 | 王亚晖的个人博客</title>
+    <title>Vue组件化常用技术 | 王亚晖的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">测试自动部署</h1>
+                    <h1 class="description center-align post-title">Vue组件化常用技术</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +444,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/test/">
-                                <span class="chip bg-color">test</span>
+                            <a href="/tags/javascript/">
+                                <span class="chip bg-color">javascript</span>
+                            </a>
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -451,8 +460,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/test/" class="post-category">
-                                test
+                            <a href="/categories/javascript/" class="post-category">
+                                javascript
                             </a>
                         
                     </div>
@@ -464,7 +473,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-23
+                    2019-12-24
                 </div>
                 
 
@@ -478,14 +487,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6
+                    532
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -501,7 +510,120 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>测试自动部署</p>
+                <h1 id="Vue组件化常用技术"><a href="#Vue组件化常用技术" class="headerlink" title="Vue组件化常用技术"></a>Vue组件化常用技术</h1><h2 id="组件传值、通信"><a href="#组件传值、通信" class="headerlink" title="组件传值、通信"></a>组件传值、通信</h2><h3 id="父组件-gt-子组件"><a href="#父组件-gt-子组件" class="headerlink" title="父组件 =&gt; 子组件:"></a>父组件 =&gt; 子组件:</h3><ul>
+<li>属性props </li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// child</span>
+props<span class="token punctuation">:</span> <span class="token punctuation">{</span> msg<span class="token punctuation">:</span> String <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>HelloWorld msg<span class="token operator">=</span><span class="token string">"Welcome to Your Vue.js App"</span><span class="token operator">/</span><span class="token operator">></span></code></pre>
+<ul>
+<li>引用refs </li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>HelloWorld ref<span class="token operator">=</span><span class="token string">"hw"</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>hw<span class="token punctuation">.</span>xx</code></pre>
+<h3 id="子组件-gt-父组件-自定义事件"><a href="#子组件-gt-父组件-自定义事件" class="headerlink" title="子组件 =&gt; 父组件:自定义事件"></a>子组件 =&gt; 父组件:自定义事件</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// child </span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'add'</span><span class="token punctuation">,</span> good<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>Cart @add<span class="token operator">=</span><span class="token string">"cartAdd($event)"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>Cart<span class="token operator">></span></code></pre>
+<h3 id="兄弟组件-通过共同祖辈组件"><a href="#兄弟组件-通过共同祖辈组件" class="headerlink" title="兄弟组件:通过共同祖辈组件"></a>兄弟组件:通过共同祖辈组件</h3><blockquote>
+<p>通过共同的祖辈组件搭桥，$parent或$root。 </p>
+</blockquote>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// brother1</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$parent<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> handle<span class="token punctuation">)</span> 
+<span class="token comment" spellcheck="true">// brother2 </span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$parent<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span></code></pre>
+<h3 id="祖先和后代之间"><a href="#祖先和后代之间" class="headerlink" title="祖先和后代之间"></a>祖先和后代之间</h3><ul>
+<li>provide/inject:能够实现祖先给后代传值 </li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// ancestor</span>
+<span class="token function">provide</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>foo<span class="token punctuation">:</span> <span class="token string">'foo'</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// descendant</span>
+inject<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">]</span></code></pre>
+<ul>
+<li>dispatch:后代给祖先传值 </li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 定义一个dispatch方法，指定要派发事件名称和数据 </span>
+<span class="token keyword">function</span> <span class="token function">dispatch</span><span class="token punctuation">(</span>eventName<span class="token punctuation">,</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> parent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$parent
+    <span class="token comment" spellcheck="true">// 只要还存在父元素就继续往上查找 </span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>parent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 父元素用$emit触发 </span>
+        parent<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span>eventName<span class="token punctuation">,</span>data<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 递归查找父元素</span>
+        parent <span class="token operator">=</span> parent<span class="token punctuation">.</span>$parent
+    <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 使用，HelloWorld.vue</span>
+<span class="token operator">&lt;</span>h1 @click<span class="token operator">=</span><span class="token string">"dispatch('hello', 'hello,world')"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> msg <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+
+<span class="token comment" spellcheck="true">// App.vue</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sayHello<span class="token punctuation">)</span></code></pre>
+<h3 id="任意两个组件之间-事件总线-或-vuex"><a href="#任意两个组件之间-事件总线-或-vuex" class="headerlink" title="任意两个组件之间:事件总线 或 vuex"></a>任意两个组件之间:事件总线 或 vuex</h3><ul>
+<li>事件总线:创建一个Bus类负责事件派发、监听和回调管理 </li>
+</ul>
+<pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// Bus:事件派发、监听和回调管理 </span>
+<span class="token keyword">class</span> <span class="token class-name">Bus</span><span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// {</span>
+    <span class="token comment" spellcheck="true">//   eventName1:[fn1,fn2],</span>
+        <span class="token comment" spellcheck="true">// eventName2:[fn3,fn4], // }</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>callbacks <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">$on</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> fn<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>callbacks<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>callbacks<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>callbacks<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>fn<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+        <span class="token function">$emit</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>callbacks<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>callbacks<span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>cb <span class="token operator">=</span><span class="token operator">></span> <span class="token function">cb</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// main.js</span>
+Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$bus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// child1</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> handle<span class="token punctuation">)</span> 
+
+<span class="token comment" spellcheck="true">// child2 </span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span></code></pre>
+<ul>
+<li>vuex:创建唯一的全局数据管理者store，通过它管理数据并通知组件状态变更 </li>
+</ul>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><blockquote>
+<p>Vue 2.6.0之后采用全新v-slot语法取代之前的slot、slot-scope </p>
+</blockquote>
+<h3 id="匿名插槽"><a href="#匿名插槽" class="headerlink" title="匿名插槽"></a>匿名插槽</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// comp1</span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>slot<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>comp<span class="token operator">></span>hello<span class="token operator">&lt;</span><span class="token operator">/</span>comp<span class="token operator">></span></code></pre>
+<h3 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// comp2</span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>slot<span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">></span>
+    <span class="token operator">&lt;</span>slot name<span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>Comp2<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 默认插槽用<span class="token keyword">default</span>做参数 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token punctuation">:</span><span class="token keyword">default</span><span class="token operator">></span>具名插槽<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span> 
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 具名插槽用插槽名做参数 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token punctuation">:</span>content<span class="token operator">></span>内容<span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Comp2<span class="token operator">></span></code></pre>
+<h3 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h3><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">// comp3</span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>slot <span class="token punctuation">:</span>foo<span class="token operator">=</span><span class="token string">"foo"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>slot<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+<span class="token comment" spellcheck="true">// parent</span>
+<span class="token operator">&lt;</span>Comp3<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 把v<span class="token operator">-</span>slot的值指定为作用域上下文对象 <span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span>template v<span class="token operator">-</span>slot<span class="token punctuation">:</span><span class="token keyword">default</span><span class="token operator">=</span><span class="token string">"ctx"</span><span class="token operator">></span>
+        来自子组件数据<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">{</span>ctx<span class="token punctuation">.</span>foo<span class="token punctuation">}</span><span class="token punctuation">}</span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>Comp3<span class="token operator">></span></code></pre>
 
             </div>
             <hr/>
@@ -527,7 +649,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.wangyhn.com/2019/12/23/ce-shi/">http://www.wangyhn.com/2019/12/23/ce-shi/</a>
+                    <a href="http://www.wangyhn.com/2019/12/24/zu-jian-hua-chang-yong-ji-zhu/">http://www.wangyhn.com/2019/12/24/zu-jian-hua-chang-yong-ji-zhu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,8 +687,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/test/">
-                                    <span class="chip bg-color">test</span>
+                                <a href="/tags/javascript/">
+                                    <span class="chip bg-color">javascript</span>
+                                </a>
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -732,84 +858,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/23/react-de-ji-ben-shi-yong-er/">
+                <a href="/2019/12/24/zu-jian-hua-chang-yong-ji-zhu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="react的基本使用二">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Vue组件化常用技术">
                         
-                        <span class="card-title">react的基本使用二</span>
+                        <span class="card-title">Vue组件化常用技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            react 的基本使用1. 基本构造react 最基本的构造如下
-&lt;!DOCTYPE html>
-  &lt;html>
-  &lt;head>
-  &lt;script src="../build/react.js">&lt;/sc
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/react/" class="post-category">
-                                    react
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/react/">
-                        <span class="chip bg-color">react</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/23/js-she-ji-mo-shi-jian-dan-gong-han-mo-shi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="js工厂模式">
-                        
-                        <span class="card-title">js工厂模式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            js设计模式（工厂模式）将许多类封装在一个函数里，然后通过这个函数可以创建我需要的对象。这种函数通常被称为工厂函数，这种模式通常被称作工厂模式
-function Basketball() {
-  this.intro = '我是一个篮球'
+                            Vue组件化常用技术组件传值、通信父组件 =&gt; 子组件:
+属性props 
 
+// child
+props: { msg: String }
+// parent
+&lt;HelloWorld msg="Welcome to Your 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-24
                             </span>
                         <span class="publish-author">
                             
@@ -823,11 +900,69 @@ function Basketball() {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/javascript/">
                         <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/23/yong-di-gui-suan-fa-shi-xian-shu-zu-chang-du-wei-5-qie-yuan-su-de-sui-ji-shu-zai-2-32-jian-bu-chong-fu-de-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="随机生成不重复值">
+                        
+                        <span class="card-title">随机生成不重复值</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值描述：
+
+生成一个长度为5的空数组arr
+生成一个（2－32）之间的随机整数rand
+把随机数rand插入到数组arr内，如果数组arr内已存在与rand相同的数字，则重新生成
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/alg/" class="post-category">
+                                    alg
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/alg/">
+                        <span class="chip bg-color">alg</span>
                     </a>
                     
                 </div>
@@ -975,7 +1110,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.8k</span>&nbsp;字
+                class="white-color">11.3k</span>&nbsp;字
             
             
             
