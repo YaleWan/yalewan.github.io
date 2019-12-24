@@ -559,6 +559,41 @@ props: { msg: String }
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'true' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"桥边姑娘","artist":"艾伦","url":"https://sz-sycdn.kuwo.cn/7ea483e49436369e51c25a23628a008b/5e01c15b/resource/n1/68/38/37304574.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music1.png"},{"name":"下山","artist":"要不要买菜","url":"https://sz-sycdn.kuwo.cn/ce9b93e731b07aba63e7fed0e50aa80c/5e01c187/resource/n3/66/46/1698365588.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music2.png"}])
+    });
+});
+</script>
+                    
 
                     
 
@@ -644,41 +679,6 @@ props: { msg: Strin
     </div>
     
 
-    
-        
-
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<div class="">
-    
-    <div class="title center-align">
-        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="aplayer" class="music"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script>
-$(function () {
-    new APlayer({
-        container: document.getElementById('aplayer'),
-        fixed: 'true' === 'true',
-        autoplay: 'true' === 'true',
-        theme: '#42b983',
-        loop: 'all',
-        order: 'list',
-        preload: 'auto',
-        volume: Number('0.7'),
-        listFolded: 'true' === 'true',
-        listMaxHeight: '',
-        audio: eval([{"name":"桥边姑娘","artist":"艾伦","url":"https://sz-sycdn.kuwo.cn/7ea483e49436369e51c25a23628a008b/5e01c15b/resource/n1/68/38/37304574.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music1.png"},{"name":"下山","artist":"要不要买菜","url":"https://sz-sycdn.kuwo.cn/ce9b93e731b07aba63e7fed0e50aa80c/5e01c187/resource/n3/66/46/1698365588.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music2.png"}])
-    });
-});
-</script>
     
 
     
@@ -797,6 +797,60 @@ props: { msg: String }
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
+                    <a href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="事件总线bus解决兄弟组件之间的传值">
+                            
+                            <span class="card-title">事件总线bus解决兄弟组件之间的传值</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                事件总线bus解决兄弟组件之间的传值实际运用：
+封装一个Bus.js
+import Vue from 'vue'
+const Bus = new Vue()
+export default Bus 
+在组件调用时引入
+组件一：
+import 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/vue/" class="post-category">
+                                    vue
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/vue/">
+                            <span class="chip bg-color">vue</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
                     <a href="/2019/12/23/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
                         <div class="card-image">
                             
@@ -891,60 +945,6 @@ const result =
                         
                         <a href="/tags/alg/">
                             <span class="chip bg-color">alg</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="事件总线bus解决兄弟组件之间的传值">
-                            
-                            <span class="card-title">事件总线bus解决兄弟组件之间的传值</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                事件总线bus解决兄弟组件之间的传值实际运用：
-封装一个Bus.js
-import Vue from 'vue'
-const Bus = new Vue()
-export default Bus 
-在组件调用时引入
-组件一：
-import 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/vue/" class="post-category">
-                                    vue
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/vue/">
-                            <span class="chip bg-color">vue</span>
                         </a>
                         
                     </div>
@@ -1055,24 +1055,22 @@ function sleep(milliseconds: num
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/12/23/react-de-ji-ben-shi-yong-er/">
+                    <a href="/2019/12/23/react-de-ji-ben-shi-yong-yi/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="react的基本使用二">
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="react的基本使用一">
                             
-                            <span class="card-title">react的基本使用二</span>
+                            <span class="card-title">react的基本使用一</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                react 的基本使用1. 基本构造react 最基本的构造如下
-&lt;!DOCTYPE html>
-  &lt;html>
-  &lt;head>
-  &lt;script src="../build/react.js">&lt;/sc
+                                react 的基本使用1. jsx语法const element = &lt;h1>Hello, world!&lt;/h1>;
+这种语法既不是字符串也不是html，他被称为jsx
+2. 元素的渲染&lt;div id="root">&lt
                             
                         </div>
                         <div class="publish-info">
@@ -1106,22 +1104,24 @@ function sleep(milliseconds: num
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/12/23/react-de-ji-ben-shi-yong-yi/">
+                    <a href="/2019/12/23/react-de-ji-ben-shi-yong-er/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="react的基本使用一">
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="react的基本使用二">
                             
-                            <span class="card-title">react的基本使用一</span>
+                            <span class="card-title">react的基本使用二</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                react 的基本使用1. jsx语法const element = &lt;h1>Hello, world!&lt;/h1>;
-这种语法既不是字符串也不是html，他被称为jsx
-2. 元素的渲染&lt;div id="root">&lt
+                                react 的基本使用1. 基本构造react 最基本的构造如下
+&lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+  &lt;script src="../build/react.js">&lt;/sc
                             
                         </div>
                         <div class="publish-info">
@@ -1205,27 +1205,22 @@ function Basketball() {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/12/23/js-ji-cheng/">
+                    <a href="/2019/12/23/js-yuan-li-ti-zong-jie/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="js继承">
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js原理题总结">
                             
-                            <span class="card-title">js继承</span>
+                            <span class="card-title">js原理题总结</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                js继承  类式继承
-  function Father(){
-    this.hobby = ['swim','smoke']
-  }
-  function Son(){
-    this.sonName = 'wang'
-  }
-  
+                                js原理题总结1. 实现一个call函数Function.prototype.mycall = function (context) {
+  if(typeof this!=='function'){
+    throw new TypeE
                             
                         </div>
                         <div class="publish-info">
@@ -1259,22 +1254,27 @@ function Basketball() {
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/12/23/js-yuan-li-ti-zong-jie/">
+                    <a href="/2019/12/23/js-ji-cheng/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js原理题总结">
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="js继承">
                             
-                            <span class="card-title">js原理题总结</span>
+                            <span class="card-title">js继承</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                js原理题总结1. 实现一个call函数Function.prototype.mycall = function (context) {
-  if(typeof this!=='function'){
-    throw new TypeE
+                                js继承  类式继承
+  function Father(){
+    this.hobby = ['swim','smoke']
+  }
+  function Son(){
+    this.sonName = 'wang'
+  }
+  
                             
                         </div>
                         <div class="publish-info">

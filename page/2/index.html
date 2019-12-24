@@ -365,6 +365,41 @@
                     
 
                     
+                        
+
+<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<div class="music-player">
+    
+    <div class="title center-align">
+        <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s12">
+            <div id="aplayer" class="music"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script>
+$(function () {
+    new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: 'false' === 'true',
+        autoplay: 'true' === 'true',
+        theme: '#42b983',
+        loop: 'all',
+        order: 'list',
+        preload: 'auto',
+        volume: Number('0.7'),
+        listFolded: 'true' === 'true',
+        listMaxHeight: '',
+        audio: eval([{"name":"桥边姑娘","artist":"艾伦","url":"https://sz-sycdn.kuwo.cn/7ea483e49436369e51c25a23628a008b/5e01c15b/resource/n1/68/38/37304574.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music1.png"},{"name":"下山","artist":"要不要买菜","url":"https://sz-sycdn.kuwo.cn/ce9b93e731b07aba63e7fed0e50aa80c/5e01c187/resource/n3/66/46/1698365588.mp3","cover":"https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/music2.png"}])
+    });
+});
+</script>
+                    
 
                     
 
