@@ -760,6 +760,32 @@ import ">
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '9a18963aa4d1ac13c5c3',
+        clientSecret: 'f66d63c1f1f58d7b5e93ccbd07ffbb719e1b3bd7',
+        repo: 'gitalk',
+        owner: 'YaleWan',
+        admin: "['YaleWan']",
+        id: '2019-12-23T18-17-14',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
 
     
 
@@ -778,23 +804,26 @@ import ">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/12/23/yong-di-gui-suan-fa-shi-xian-shu-zu-chang-du-wei-5-qie-yuan-su-de-sui-ji-shu-zai-2-32-jian-bu-chong-fu-de-zhi/">
+                <a href="/2019/12/23/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="随机生成不重复值">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="去字符串中空格">
                         
-                        <span class="card-title">随机生成不重复值</span>
+                        <span class="card-title">去字符串中空格</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用递归算法实现，数组长度为5且元素的随机数在2-32间不重复的值描述：
+                            写一个方法去掉字符串中的空格
+写一个方法去掉字符串中的空格
+要求传入不同的类型分别能去掉前、后、前后、中间的空格
 
-生成一个长度为5的空数组arr
-生成一个（2－32）之间的随机整数rand
-把随机数rand插入到数组arr内，如果数组arr内已存在与rand相同的数字，则重新生成
+const str = '  s t  r  '
+
+const POSITION = Object.freeze({
+  l
                         
                     </div>
                     <div class="publish-info">
@@ -831,26 +860,21 @@ import ">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/12/23/xie-yi-ge-fang-fa-qu-diao-zi-fu-chuan-zhong-de-kong-ge/">
+                <a href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="去字符串中空格">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="找出字符串中连续出现最多的字符和个数">
                         
-                        <span class="card-title">去字符串中空格</span>
+                        <span class="card-title">找出字符串中连续出现最多的字符和个数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            写一个方法去掉字符串中的空格
-写一个方法去掉字符串中的空格
-要求传入不同的类型分别能去掉前、后、前后、中间的空格
-
-const str = '  s t  r  '
-
-const POSITION = Object.freeze({
-  l
+                            找出字符串中连续出现最多的字符和个数const arr = str.match(/(\w)\1*/g);
+const maxLen = Math.max(...arr.map(s => s.length));
+const result = 
                         
                     </div>
                     <div class="publish-info">
@@ -1141,6 +1165,25 @@ $(function () {
 
     
 
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "ae70992a"
+        });
+        daovoice('update');
+    </script>
     
 
     
