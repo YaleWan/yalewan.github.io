@@ -4,11 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaScript中打乱数组排序, 王亚晖的个人博客">
-    <meta name="description" content="JavaScript中打乱数组排序
-利用sort()函数
-arr.sort(()=&gt;Math.random() - 0.5)
-但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回">
+    <meta name="keywords" content="gitlab-ci, 王亚晖的个人博客">
+    <meta name="description" content="简介持续集成(Continuous integration，简称CI)是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。 每次集成都通过自动化的构建（包括编译，发布，自动化">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +13,7 @@ arr.sort(()=&gt;Math.random() - 0.5)
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JavaScript中打乱数组排序 | 王亚晖的个人博客</title>
+    <title>gitlab-ci | 王亚晖的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -319,12 +316,12 @@ arr.sort(()=&gt;Math.random() - 0.5)
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaScript中打乱数组排序</h1>
+                    <h1 class="description center-align post-title">gitlab-ci</h1>
                 </div>
             </div>
         </div>
@@ -441,8 +438,8 @@ arr.sort(()=&gt;Math.random() - 0.5)
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/alg/">
-                                <span class="chip bg-color">alg</span>
+                            <a href="/tags/skill/">
+                                <span class="chip bg-color">skill</span>
                             </a>
                         
                     </div>
@@ -453,8 +450,8 @@ arr.sort(()=&gt;Math.random() - 0.5)
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/alg/" class="post-category">
-                                alg
+                            <a href="/categories/skill/" class="post-category">
+                                skill
                             </a>
                         
                     </div>
@@ -466,28 +463,28 @@ arr.sort(()=&gt;Math.random() - 0.5)
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-23
+                    2019-12-27
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-23
+                    2019-12-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    156
+                    3.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    12 分
                 </div>
                 
 				
@@ -503,29 +500,208 @@ arr.sort(()=&gt;Math.random() - 0.5)
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JavaScript中打乱数组排序"><a href="#JavaScript中打乱数组排序" class="headerlink" title="JavaScript中打乱数组排序"></a>JavaScript中打乱数组排序</h1><ul>
-<li><p>利用sort()函数</p>
-<pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">)</span></code></pre>
-<p>但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。</p>
-</li>
-<li><p>Fisher-Yates shuffle(洗牌算法)</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">let</span> i <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">let</span> j <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> idx<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span> targetIdx <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
-        <span class="token punctuation">;</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">]</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> arr
-<span class="token punctuation">}</span></code></pre>
-<p>如果要将数组随机排序，目前而言，Fisher–Yates shuffle 算法应该是最好的选择。</p>
-</li>
-</ul>
+                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>持续集成(Continuous integration，简称CI)是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。 每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而尽早地发现集成错误。</p>
+<p>持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起。持续集成的目的，可以更高效率的快速迭代软件产品，同时还能保证高质量。它可以保障，我们把代码合并到主干之前，能够充分的自动化测试，单元测试，只要有一个单元测试未通过，则无法集成到主干。 </p>
+<p>但是这样会导致，开发人员要多次进行项目构建，浪费了很多开发时间，所以需要将构建等过程交由自动化的方式去处理，于是就有了持续集成系统。</p>
+<p>Gitlab CI就是这样一个工具，可以在用户Push、创建tag，或者手动触发等方式去执行指定的脚本，从而进行代码的构建、发布等操作，和Gitlab相结合，可以无缝的完成代码管理和集成。</p>
+<h1 id="安装与配置"><a href="#安装与配置" class="headerlink" title="安装与配置"></a>安装与配置</h1><p>让一个gitlab项目具备CI能力，分为两部分，一个是CI的配置文件.gitlab-ci.yml，一个是gitlab-runner。</p>
+<p>.gitlab-ci.yml是描述当前项目是以怎样的方式进行构建和部署，需要将它放在项目的根目录。在任何的push操作，GitLab都会寻找.gitlab-ci.yml文件，并对此次commit开始jobs，jobs的内容来源于.gitlab-ci.yml文件。</p>
+<p>gitlab runner 是用来执行脚本操作的，它和gitlab是分开的，可以单独部署。</p>
+<h2 id="gitlab-ci-yml"><a href="#gitlab-ci-yml" class="headerlink" title=".gitlab-ci.yml"></a>.gitlab-ci.yml</h2><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pipeline</td>
+<td>相当于一次构建任务，里面可以包含多个Stages(构建阶段)，如安装依赖、运行测试、编译、部署测试服务器、部署生产服务器等流程。</td>
+</tr>
+<tr>
+<td>Stages</td>
+<td>构建阶段，里面可以包含多个Jobs（构建工作）。<br><ul><li>所有 Stages 会按照顺序运行，即当一个 Stage 完成后，下一个 Stage 才会开始；</li><li>只有当所有 Stages 完成后，该构建任务 (Pipeline) 才会成功；</li><li>如果任何一个 Stage 失败，那么后面的 Stages 不会执行，该构建任务 (Pipeline) 失败。</li></ul></td>
+</tr>
+<tr>
+<td>Jobs</td>
+<td>构建工作，每个Job中会执行很多脚本script。<br> <ul><li>相同 Stage 中的 Jobs 会并行执行；</li><li>相同 Stage 中的 Jobs 都执行成功时，该 Stage 才会成功；</li><li>如果任何一个 Job 失败，那么该 Stage 失败，即该构建任务 (Pipeline) 失败</li></ul></td>
+</tr>
+</tbody></table>
+<p><img src="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/9183289-3ef19546e251d4ea.jpg" alt=""></p>
+<p><img src="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/9183289-96c931ed61edb9d2.jpg" alt=""></p>
+<p><img src="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/9183289-f32431f501080d88.jpg" alt=""></p>
+<p>参考下面的配置文件：</p>
+<pre class=" language-yml"><code class="language-yml">cache:
+  key: ${CI_BUILD_REF_NAME}
+  paths:
+    - node_modules/
+
+# 构建阶段    
+stages:
+  - install_deps
+  - build
+  - deploy
+
+before_script:
+  - export PATH=$PATH:/home/software/node-v8.9.0-linux-x64/bin
+
+# 安装依赖
+install_deps:
+  stage: install_deps
+  when: manual
+  allow_failure: false
+  only:
+    - master
+  script:
+    - npm install
+
+# 部署生产服务器
+build:
+  stage: build
+  only:
+    - master
+  script:
+    - gitbook build 
+
+# 部署生产服务器
+deploy:
+  stage: deploy
+  only:
+    - master
+  script:
+    - node sftp.js</code></pre>
+<h3 id="cache"><a href="#cache" class="headerlink" title="cache"></a>cache</h3><p>每个Job开始的时候，Runner 都会删掉.gitignore 里面的文件。cache用于指定一些需要在任务间进行缓存的文件和目录，你只能使用项目工作空间内的路径来指定缓存。常用的就是讲node_modules中的代码进行缓存，不要重复的安装。</p>
+<blockquote>
+<p>1) cache可以全局，也可以属于某个stage。<br><br>2) cache可以指定路径，也可以是整个git项目。<br><br>3) 管理界面会有按钮“Clear Runner caches button”，会直接删除已经缓存的数据。<br></p>
+</blockquote>
+<h3 id="before-script"><a href="#before-script" class="headerlink" title="before_script"></a>before_script</h3><p>定义任何 Jobs 运行前都会执行的命令。</p>
+<h2 id="2、gitlab-runner"><a href="#2、gitlab-runner" class="headerlink" title="2、gitlab-runner"></a>2、gitlab-runner</h2><p>Gitlab Runner是一个开源的项目，用来运行你的jobs，然后发送运行的结果到Gitlab。它和Gitlab CI管理使用，是Gitlab中一个开源的持续集成服务。GitLab8.0以后的版本是默认集成了GitLab-CI并且默认启用的。</p>
+<p>GitLab-Runner是配合GitLab-CI进行使用的。一般地，GitLab里面的每一个工程都会定义一个属于这个工程的软件集成脚本，用来自动化地完成一些软件集成工作。当这个工程的仓库代码发生变动时，比如有人push了代码，GitLab就会将这个变动通知GitLab-CI。这时GitLab-CI会找出与这个工程相关联的Runner，并通知这些Runner把代码更新到本地并执行预定义好的执行脚本。</p>
+<p><img src="https://i.imgur.com/5AX3UVI.jpg" alt="image"></p>
+<p>每个Runner都可以分开部署到独立的机器上，同一个主机上也可以有多个Runner，Runner运行不会影响Gitlab的运行。所以，GitLab-Runner就是一个用来执行软件集成脚本的东西。你可以想象一下：Runner就像一个个的工人，而GitLab-CI就是这些工人的一个管理中心，所有工人都要在GitLab-CI里面登记注册，并且表明自己是为哪个工程服务的。当相应的工程发生变化时，GitLab-CI就会通知相应的工人执行软件集成脚本。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>参考<a href="https://docs.gitlab.com/runner/install/index.html" target="_blank" rel="noopener">Gitlab Runner网站</a>。我是在Centos上面安装，参考的是<a href="https://docs.gitlab.com/runner/install/linux-repository.html" target="_blank" rel="noopener">通过代码仓库安装的方式</a>。</p>
+<pre><code># 1 Add GitLab’s official repository:
+# For RHEL/CentOS/Fedora
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh | sudo bash
+
+# 2 Install the latest version of GitLab Runner
+# For RHEL/CentOS/Fedora
+sudo yum install gitlab-runner
+</code></pre><h3 id="注册CI服务"><a href="#注册CI服务" class="headerlink" title="注册CI服务"></a>注册CI服务</h3><p>现在我们需要将Gitlab CI和Gitlab Runner关联起来。</p>
+<p>第一步是将.gitlab-ci.yml文件上传到项目的根目录。</p>
+<p>第二步是到Gitlab Runner安装的服务器通过下面的命令注册一个Runner，注册步骤如下。</p>
+<pre><code># https://docs.gitlab.com/runner/register/index.html
+sudo gitlab-runner register</code></pre><p>输入Gitlab的根目录地址</p>
+<pre><code>Please enter the gitlab-ci coordinator URL (e.g. https://gitlab.com )
+
+http://182.254.153.226/</code></pre><p>请输入注册Runner所需的token，这个是每个项目唯一的</p>
+<pre><code>Please enter the gitlab-ci token for this runner
+xxxx-xx-x-x-xxx</code></pre><p>输入该Runner的一个描述信息，可以在Gitlab中修改</p>
+<pre><code>Please enter the gitlab-ci description for this runner
+my-runner</code></pre><p>输入Runner相关联的tags，Gitlab项目可以指定tags来选择使用哪个Runner</p>
+<pre><code>Please enter the gitlab-ci tags for this runner (comma separated):
+my-tag,another-tag</code></pre><p>输入执行Runner的方式，我们目前都是用的shell</p>
+<pre><code>Please enter the executor: ssh, docker+machine, docker-ssh+machine, kubernetes, docker, parallels, virtualbox, docker-ssh, shell:
+shell</code></pre><p>url和token获取的方式，根据Gitlab的版本不同，略有不同，我们的Gitlab版本是10.4.2-ee，获取方式如下图所示：</p>
+<p><img src="https://i.imgur.com/KxmBeaY.jpg" alt="image"></p>
+<p><img src="https://i.imgur.com/3gJT28R.jpg" alt="image"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>到此为止，我们就可以在当前项目中使用CI服务了，但是我们还可以控制什么时候触发一个Pipeline，后面我们会详细讲解常用的几种方式。</p>
+<h1 id="触发方式"><a href="#触发方式" class="headerlink" title="触发方式"></a>触发方式</h1><p>默认每次我们Push的时候都会触发Gitlab CI去运行一个Pipeline，但是有的时候我们希望可以控制触发Pipeline的时机，以及控制是自动执行还是手动执行。</p>
+<p>首先我们知道Pipeline中包含多个Stage，Stage中又分为多个Job来执行，.gitlab-ci.yml中我们对每个Job进行行为配置，来控制执行的时机，从而控制Pipeline执行的时机。</p>
+<h2 id="only"><a href="#only" class="headerlink" title="only"></a>only</h2><p>首先，是only和except配置，两个参数说明了job什么时候将会被创建，我们主要在使用only，下面是only可用的一些值。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>branches</strong></td>
+<td>当一个分支被push上来，可以是一个具体的分支名，比如master，release等。</td>
+</tr>
+<tr>
+<td><strong>tags</strong></td>
+<td>当一个打了tag的分支被push上来</td>
+</tr>
+<tr>
+<td>api</td>
+<td>当一个pipline被piplines api所触发调起，详见piplines api</td>
+</tr>
+<tr>
+<td>external</td>
+<td>当使用了GitLab以外的CI服务</td>
+</tr>
+<tr>
+<td>pipelines</td>
+<td>针对多项目触发器而言，当使用CI_JOB_TOKEN并使用gitlab所提供的api创建多个pipelines的时候</td>
+</tr>
+<tr>
+<td>pushes</td>
+<td>当pipeline被用户的git push操作所触发的时候</td>
+</tr>
+<tr>
+<td>schedules</td>
+<td>针对预定好的pipline而言（每日构建一类~，具体请看链接）</td>
+</tr>
+<tr>
+<td>triggers</td>
+<td>用token创建piplines的时候</td>
+</tr>
+<tr>
+<td><strong>web</strong></td>
+<td>在GitLab页面上Pipelines标签页下，你按了run pipline的时候</td>
+</tr>
+<tr>
+<td><em>merge_requests</em></td>
+<td>创建或者更新merge request的时候，但是<em>只有Gitlab 11.6以上的版本可以用</em></td>
+</tr>
+</tbody></table>
+<h3 id="web"><a href="#web" class="headerlink" title="web"></a>web</h3><p>web的意思就是不要自动创建Job，要用户自己手动去Run Pipeline的时候再创建。这种方式主要用在我们希望手动去触发Pipeline的时候，流程可以由我们控制。而且，可以选择指定的分支去上线，这样可以通过git diff出和master分支不同的代码，然后上传七牛。主要是为了解决<a href="http://www.che300.com图片和代码太多不方便一次性全部上线的问题。" target="_blank" rel="noopener">www.che300.com图片和代码太多不方便一次性全部上线的问题。</a></p>
+<p>这种项目我们还可以开启Settings–&gt;General–&gt;Merge request settings中的Only allow merge requests to be merged if the pipeline succeeds功能。这样当当前项目提交merge的同时，创建一个pipeline，在Pipeline没有完成之前，merge request不能合并，这样会减少合并代码之后不好diff上线代码的问题。</p>
+<h3 id="master"><a href="#master" class="headerlink" title="master"></a>master</h3><p>当有代码合并到master分支的时候，就会创建该Job，从而在Pipeline页面就会看到一个新的Pipeline。比如fe-wiki项目就是使用master分支发布的，我们一旦更新了master代码，会执行指定的Job，比如install、build，然后将编译好的Gitbook发送到指定的服务器上。</p>
+<h3 id="release"><a href="#release" class="headerlink" title="release"></a>release</h3><p>当有代码合并到release分支的时候，就会创建该Job，从而在Pipeline页面就会看到一个新的Pipeline。之所以使用release分支发布，而不是master分支，原因是我们在使用quploader的git模式上线的时候，代码必须和远程master分支diff出不同的代码，再上线，如果先合并到master分支了，就没办法去diff了。所以，pics和libs项目，我们都是用了release分支去发布了。</p>
+<h3 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h3><p>这种方式类似于web，只不过我们需要先打一个tag，然后就会自动创建Job和Pipeline，然后就可以发布上线。这样有一个好处就是方便后续回滚的时候，我们可以直接基于某个tag去重新发布代码。</p>
+<h2 id="when"><a href="#when" class="headerlink" title="when"></a>when</h2><p>前面提到我们可以做到当Job创建之后自动或者手动执行，依靠的就是when，when参数是确定该job在失败或者没失败的时候执行不执行的参数。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>on_success</td>
+<td>只有在之前场景执行的所有作业成功的时候才执行当前job，这个就是默认值，我们用最小配置的时候他默认就是这个值，所以失败的时候pipeline会停止执行后续任务</td>
+</tr>
+<tr>
+<td>on_failure</td>
+<td>只有在之前场景执行的任务中至少有一个失败的时候才执行</td>
+</tr>
+<tr>
+<td>always</td>
+<td>不管之前场景阶段的状态，总是执行</td>
+</tr>
+<tr>
+<td>manual</td>
+<td>~手动执行job的时候触发（webui上点的）。请阅读<a href="https://segmentfault.com/a/1190000011890710#articleHeader9" target="_blank" rel="noopener">manual action</a></td>
+</tr>
+</tbody></table>
+<p>下面的配置就可以做到，当前Job手动执行，而且执行成功之前，不会执行后续的Job。用到了allow_failure。</p>
+<pre><code>when: manual
+allow_failure: false</code></pre><p>allow_failure被用于当你想允许job失败而不阻塞剩下的CI套件执行的时候，失败的job不会影响到commit状态(pipelines执行完会在commit上标记失败或成功状态，但是不会阻止commit提交)。</p>
+<p>当allow_failure为true，并且job失败了，pipline将会置绿或者置成功显示，但是你会在commit页面或者job页面看到一条“CI build passed with warnings”的警告信息哈。</p>
+<p>当allow_failure为false，当前Job执行成功（注意是成功不是完成）之前，后续的Job是不会执行的，从而达到了阻塞所有后续Job的功能。</p>
+<h1 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h1><p>我们在使用Gitlab Runner的时候，在服务器上会创建一个gitlab-runner的用户，它的用户权限是受限的，在实际使用中，发现过npm install的时候总是失败的情况，因此需要给它赋予Root权限。</p>
+<p>我们需要对/etc/sudoers 文件进行修改，增加gitlab-runner用户的运行sudo的能力。</p>
+<pre><code>sudo EDITOR=vi visudo
+vi /etc/sudoers</code></pre><p>在文件最后的位置增加下面的代码，然后保存</p>
+<pre><code>gitlab-runner ALL=(ALL) NOPASSWD: ALL</code></pre><p>然后就可以使用 sudo npm install 来安装对应的npm依赖。</p>
+<blockquote>
+<p>【注】：使用sudo生成的文件都有可能会出现删除失败的情况。比如npm run dist 生成的dist文件。以及当使用“Clear Runner caches button”按钮删除导致的node_modules目录，也会出现删除不了的问题。</p>
+</blockquote>
+<h1 id="项目应用"><a href="#项目应用" class="headerlink" title="项目应用"></a>项目应用</h1><p><img src="https://yhpics.oss-cn-beijing.aliyuncs.com/img/blog/projs.png" alt=""></p>
+<h1 id="大总结"><a href="#大总结" class="headerlink" title="大总结"></a>大总结</h1><p>基于Gitlab CI 和 Gitlab Runner来实现了相关项目的持续集成以及自动部署。后续可以根据需要的情况，来合理配置。</p>
 
             </div>
             <hr/>
@@ -551,7 +727,7 @@ arr.sort(()=&gt;Math.random() - 0.5)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.wangyhn.com/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/">http://www.wangyhn.com/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/</a>
+                    <a href="http://www.wangyhn.com/2019/12/27/gitlab-ci/">http://www.wangyhn.com/2019/12/27/gitlab-ci/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,8 +765,8 @@ arr.sort(()=&gt;Math.random() - 0.5)
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/alg/">
-                                    <span class="chip bg-color">alg</span>
+                                <a href="/tags/skill/">
+                                    <span class="chip bg-color">skill</span>
                                 </a>
                             
                         </div>
@@ -761,7 +937,7 @@ arr.sort(()=&gt;Math.random() - 0.5)
         repo: 'gitalk',
         owner: 'YaleWan',
         admin: "YaleWan",
-        id: '2019-12-23T18-17-14',
+        id: '2019-12-27T10-44-22',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -782,87 +958,29 @@ arr.sort(()=&gt;Math.random() - 0.5)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/23/flex-dan-xing-bu-ju/">
+                <a href="/2019/12/27/gitlab-ci/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="flex弹性布局">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="gitlab-ci">
                         
-                        <span class="card-title">flex弹性布局</span>
+                        <span class="card-title">gitlab-ci</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            flex弹性布局flex 弹性盒子模型声明 display:flex，那么这个元素就成为了弹性容器，具有flex弹性布局的特性。
-
-每个弹性容器都有两根轴：主轴和交叉轴，两轴之间成90度关系。注意：水平的不一定就是主轴。
-每根轴都有起点和终
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/html/" class="post-category">
-                                    html
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/html/">
-                        <span class="chip bg-color">html</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/23/1-an-zhuang-xiang-guan-de-fu-wu-qi-wen-jian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="安装相关的服务器文件">
-                        
-                        <span class="card-title">安装相关的服务器文件</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            1 安装相关的服务器文件
-apache-tomcat
-jdk      windows/linux具体看服务器是什么
-putty    对远程服务器进行操作
-FileZilla   对服务器文件进行copy 
-
-2 FileZilla
-输入
+                            简介持续集成(Continuous integration，简称CI)是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。 每次集成都通过自动化的构建（包括编译，发布，自动化
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-27
                             </span>
                         <span class="publish-author">
                             
@@ -876,11 +994,71 @@ FileZilla   对服务器文件进行copy
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/serve/">
-                        <span class="chip bg-color">serve</span>
+                    <a href="/tags/skill/">
+                        <span class="chip bg-color">skill</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/24/zu-jian-hua-chang-yong-ji-zhu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Vue组件化常用技术">
+                        
+                        <span class="card-title">Vue组件化常用技术</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Vue组件化常用技术组件传值、通信父组件 =&gt; 子组件:
+属性props 
+
+// child
+props: { msg: String }
+// parent
+&lt;HelloWorld msg="Welcome to Your 
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/javascript/" class="post-category">
+                                    javascript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/javascript/">
+                        <span class="chip bg-color">javascript</span>
+                    </a>
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
