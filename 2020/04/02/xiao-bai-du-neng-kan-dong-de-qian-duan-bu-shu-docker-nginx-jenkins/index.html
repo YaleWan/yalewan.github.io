@@ -4,16 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js 优雅写法总结, 王亚晖的个人博客">
-    <meta name="description" content="js优雅写法
-封装多个函数
-传统写法
-function checkName(){}
-function checkEmail(){}
-function checkPassword(){}
-.....
-优雅写法
-let checkType = ">
+    <meta name="keywords" content="小白都能看懂的前端部署（docker+nginx+jenkins）, 王亚晖的个人博客">
+    <meta name="description" content="
+前言随着devops的发展，前端部署变得越来越简单，可控性也越来越高，本文基于docker🐳+nginx+jenkins来实现前端自动化部署流程，具体实现效果为开发人员在本地开发，开发push提交代码到指定分支，😊自动触发jenkin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +14,7 @@ let checkType = ">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>js 优雅写法总结 | 王亚晖的个人博客</title>
+    <title>小白都能看懂的前端部署（docker+nginx+jenkins） | 王亚晖的个人博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +317,12 @@ let checkType = ">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js 优雅写法总结</h1>
+                    <h1 class="description center-align post-title">小白都能看懂的前端部署（docker+nginx+jenkins）</h1>
                 </div>
             </div>
         </div>
@@ -446,8 +439,8 @@ let checkType = ">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/javascript/">
-                                <span class="chip bg-color">javascript</span>
+                            <a href="/tags/skill/">
+                                <span class="chip bg-color">skill</span>
                             </a>
                         
                     </div>
@@ -458,8 +451,8 @@ let checkType = ">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/javascript/" class="post-category">
-                                javascript
+                            <a href="/categories/skill/" class="post-category">
+                                skill
                             </a>
                         
                     </div>
@@ -471,28 +464,28 @@ let checkType = ">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-12-23
+                    2020-04-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-23
+                    2020-04-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    63
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 				
@@ -508,32 +501,123 @@ let checkType = ">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="js优雅写法"><a href="#js优雅写法" class="headerlink" title="js优雅写法"></a>js优雅写法</h1><ul>
-<li><p>封装多个函数</p>
-<p>传统写法</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">checkEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token keyword">function</span> <span class="token function">checkPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
-<span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre>
-<p>优雅写法</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> checkType <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token keyword">this</span><span class="token punctuation">.</span>addCheck <span class="token operator">=</span> <span class="token punctuation">(</span>type <span class="token punctuation">,</span>fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> fn<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">let</span> check <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">checkType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-
-check<span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkName'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkName'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkPsw'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkPsw'</span><span class="token punctuation">)</span>
-    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span>
-a<span class="token punctuation">.</span><span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkPsw</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+                <p><img src="https://user-gold-cdn.xitu.io/2020/4/1/1713499db8c62994?w=916&h=364&f=png&s=89255" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>随着<code>devops</code>的发展，前端部署变得越来越简单，可控性也越来越高，本文基于<code>docker</code>🐳+<code>nginx</code>+<code>jenkins</code>来实现前端自动化部署流程，具体实现效果为开发人员在本地开发，开发push提交代码到指定分支，😊自动触发jenkins进行持续集成和自动化部署。部署完成后会收到邮件的通知，构建成功后会将打包后的文件上传到服务器，通过<code>nginx</code>反向代理展现页面。构建失败则打印出错误日志。而<code>docker</code>🐳是我们整个部署方案中很重要的一块，由<code>docker</code>构建镜像，保证了环境的统一🐂🍺。</p>
+<h2 id="部署目标"><a href="#部署目标" class="headerlink" title="部署目标"></a>部署目标</h2><ul>
+<li>搭建docker🐳、nginx、jenkins环境</li>
+<li>配置docker-compose.yaml<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><blockquote>
+<p>本文选用centos7云服务器</p>
+</blockquote>
+<h3 id="docker环境"><a href="#docker环境" class="headerlink" title="docker环境"></a>docker环境</h3><blockquote>
+<p>如果大家对<code>docker</code>、<code>docker-compose</code>有不了解的地方，可以去恶补一下这方面的知识，这边就不详细赘述了。</p>
+</blockquote>
 </li>
 </ul>
+<p>在安装 docker 之前，我们先来了解一下docker的版本定义，这有利于我们在之后的开发中选择和使用合适的 Docker 版本。对于docker来说,它分为两个系列:</p>
+<ul>
+<li>社区版(ce)</li>
+<li>企业版(ee)<br/></li>
+</ul>
+<p>社区版和企业版的区别无非就是企业版收费，提供额外的服务。</p>
+<pre class=" language-cmd"><code class="language-cmd"> sudo yum install yum-utils device-mapper-persistent-data lvm2
+ sudo yum-config-manager --add-repo \
+   https://download.docker.com/linux/centos/docker-ce.repo
+ sudo yum install docker-ce</code></pre>
+<p>不出意外的话 输入<code>docker -v</code>出现图下页面就代表成功了</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/29/17123dbbacbd3c68?w=636&h=124&f=png&s=168332" alt=""></p>
+<pre class=" language-cmd"><code class="language-cmd"> sudo systemctl enable docker // 设置开机自启 
+ sudo systemctl start docker //  启动docker
+</code></pre>
+<h3 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h3><p>一个完整的应用程序，往往都不是一个容器组成的，而是通过容器组成一个容器群。一个容器群的搭建需要执行太多命令，更重要的是需要考虑太多应用和容器间的依赖关系处理，是一波令人头大的操作。docker-compose正是解决多个容器之间管理的问题。</p>
+<pre class=" language-cmd"><code class="language-cmd">sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose</code></pre>
+<p>输入命令安装<code>docker-compose</code>，安装完成后提升权限                                                                                                                          </p>
+<pre class=" language-cmd"><code class="language-cmd">udo chmod +x /usr/local/bin/docker-compose</code></pre>
+<p>执行完上面命令后，不出意外输入<code>docker-componse -v</code>显示如下页面</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/29/171252b5c4e9fb86?w=762&h=102&f=png&s=157410" alt=""></p>
+<h3 id="安装jenkins和nginx环境"><a href="#安装jenkins和nginx环境" class="headerlink" title="安装jenkins和nginx环境"></a>安装jenkins和nginx环境</h3><p>jenkins和nginx环境从远端docker镜像库拉取</p>
+<pre class=" language-cmd"><code class="language-cmd">docker pull jenkins/jenkins:lts
+docker pull nginx </code></pre>
+<p>在这里推荐安装<code>jenkins/jenkins</code>这个镜像，<code>jenkins</code>镜像是docker官方维护的镜像，已经很久没有维护了，<code>jenkins/jenkins</code>是jenkins官方维护的库。更新频率非常的到位。后面跟lts表示长期支持的意思。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/29/17123fe901a7ea69?w=1322&h=168&f=png&s=456917" alt=""><br>安装完成后执行<code>docker images</code>可以清晰的看到当前docker下存在的镜像。</p>
+<h3 id="编写docker-compose目录"><a href="#编写docker-compose目录" class="headerlink" title="编写docker-compose目录"></a>编写docker-compose目录</h3><p>这边的目录结构你可以理解为搭建环境所需要的配置文件和挂载卷等，与搭建一个软件开发项目类似，提倡将 Docker Compose项目的组成内容聚集到一个文件目录中，这样更利于我们进行管理和迁移。目录结构如下👉</p>
+<pre class=" language-cmd"><code class="language-cmd">+ compose
+  - docker-compose.yml  // docker-compose执行文件
++ nginx 
+  + conf.d
+    - nginx.conf        // nginx配置
++ jenkins
+  - jenkins_home       // jenkins挂载卷
++ webserver            
+  -static              //存放前端打包后的dist文件</code></pre>
+<p>为了简单，我这边的目录结构直接放在home下面，当然，你也可以新建一个新的目录。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/30/1712934d36082532?w=1130&h=132&f=png&s=235378" alt=""></p>
+<h3 id="编写docker-compose-yml"><a href="#编写docker-compose-yml" class="headerlink" title="编写docker-compose.yml"></a>编写docker-compose.yml</h3><pre class=" language-cmd"><code class="language-cmd">version: '3'
+
+
+services:                                      # 集合
+  docker_jenkins:
+    user: root                                 # 为了避免一些权限问题 在这我使用了root
+    restart: always                            # 重启方式
+    image: jenkins/jenkins:lts                 # 指定服务所使用的镜像 在这里我选择了 LTS (长期支持)
+    container_name: jenkins                    # 容器名称
+    ports:                                     # 对外暴露的端口定义
+      - 8080:8080
+      - 50000:50000
+    volumes:                                   # 卷挂载路径
+      - /home/jenkins/jenkins_home/:/var/jenkins_home  # 这是我们一开始创建的目录挂载到容器内的jenkins_home目录
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker                # 这是为了我们可以在容器内使用docker命令
+      - /usr/local/bin/docker-compose:/usr/local/bin/docker-compose
+  docker_nginx:
+    restart: always
+    image: nginx
+    container_name: nginx
+    ports:
+      - 8090:80
+      - 80:80
+      - 433:433
+    volumes:
+      - /home/nginx/conf.d/:/etc/nginx/conf.d
+      - /home/webserver/static/jenkins/dist/:/usr/share/nginx/html</code></pre>
+<h3 id="编写nginx-conf"><a href="#编写nginx-conf" class="headerlink" title="编写nginx.conf"></a>编写nginx.conf</h3><pre class=" language-cmd"><code class="language-cmd">server{
+  listen  80;
+  root /usr/share/nginx/html;
+  index index.html index.htm;
+}</code></pre>
+<h3 id="启动docker-compose"><a href="#启动docker-compose" class="headerlink" title="启动docker-compose"></a>启动docker-compose</h3><p>回到compose目录下</p>
+<pre class=" language-cmd"><code class="language-cmd">docker-compose up -d</code></pre>
+<p>输入<code>docker ps</code>查看容器的情况<br><img src="https://user-gold-cdn.xitu.io/2020/3/31/1712e93b20f7ca05?w=2270&h=190&f=png&s=849125" alt=""><br>如上图所示，up状态表示已启用，不出意外浏览器ip地址加上端口号8080</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/31/1712e987047fcfeb?w=2054&h=1142&f=png&s=202967" alt=""><br>这边注意哈，你的密码不在<code>/var/jenkins/jenkins_home/</code>下，在当初配置<code>docker-compose.ym</code>l中的<code>volumes</code>中<code>/home/jenkins/jenkins_home/</code></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/31/1712ea20d24a7ec2?w=1240&h=72&f=png&s=168550" alt=""><br>拿到密码进入后，安装<code>推荐的插件</code></p>
+<h2 id="安装jenkins插件"><a href="#安装jenkins插件" class="headerlink" title="安装jenkins插件"></a>安装jenkins插件</h2><blockquote>
+<p>在此之前，先准备一个vue-cli生成的vue项目，将项目放到gitlab中。</p>
+</blockquote>
+<ul>
+<li>jenkins安装必要的插件<code>gitlab</code>、<code>Publish Over SSH</code>、<code>nodejs</code></li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/17133cb9d05e328c?w=1906&h=1418&f=png&s=375581" alt="">点击直接安装进行安装插件。安装完成后配置nodejs环境和ssh参数<br>在首页选择<code>global tool Configuration</code>&gt;<code>NodeJS</code>选择自动安装和对应的nodejs版本号，选择成功后点击保存<br><img src="https://user-gold-cdn.xitu.io/2020/4/1/171346034d047b6a?w=2856&h=1592&f=png&s=253440" alt=""><br>配置ssh信息，<code>Manage Jenkins</code>&gt;<code>configure System</code>填写服务器的相关信息<br><img src="https://user-gold-cdn.xitu.io/2020/4/1/171346eea555cfce?w=2852&h=1606&f=png&s=258981" alt=""></p>
+<h2 id="jenkins与gitlab集成"><a href="#jenkins与gitlab集成" class="headerlink" title="jenkins与gitlab集成"></a>jenkins与gitlab集成</h2><h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><ul>
+<li>在服务器中生成ssh密钥（如果已经存在不需要生成）</li>
+</ul>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/17133dd42e2293bc?w=946&h=100&f=png&s=208289" alt=""><br><strong>生成命令</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">ssh-keygen -t rsa</code></pre>
+<p>将生成的私钥 <code>id_rsa</code>添加到jenkins凭据中<br><img src="https://user-gold-cdn.xitu.io/2020/4/1/171344748088714b?w=2824&h=1236&f=png&s=265074" alt=""></p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/17134485b6b62469?w=2800&h=1230&f=png&s=160853" alt=""><br>登陆gitlab，在<code>gitlab</code>中配置<code>id_rsa.pub</code>公钥</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/171344d4f5cef739?w=2866&h=1090&f=png&s=260895" alt=""></p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>准备完毕后，开始新建一个任务，选择<code>新建item</code>&gt;<code>freestyle project</code>构建一个自由风格的项目。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/171344ecf55d55db?w=2762&h=1458&f=png&s=371573" alt=""></p>
+<h3 id="源码管理"><a href="#源码管理" class="headerlink" title="源码管理"></a>源码管理</h3><p>新建完成后，在<code>源码管理</code>中配置git信息，<code>credentials</code>选择我们刚刚添加的凭证</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/17134526e544b891?w=2762&h=1564&f=png&s=289002" alt=""></p>
+<h3 id="构建触发器"><a href="#构建触发器" class="headerlink" title="构建触发器"></a>构建触发器</h3><p>在<code>构建触发器中</code>选择我们触发构建的时机，你可以选择队友的钩子，比如<code>push</code>代码的时候，<code>Merge Request</code>的时候等。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/171345561d76ede5?w=2468&h=1324&f=png&s=261399" alt=""><br>点击<code>高级选项</code>找到<code>secret token</code>&gt;<code>Generate</code>生成一个token值</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/171345963f8d49c0?w=2114&h=1274&f=png&s=241899" alt=""><br>你在这边配置成功后，还需要到<code>gitlab</code>中增加对应的钩子。记下上图的<code>webhookURL</code>（红线框出）和<code>secret token</code>值，到gitlab中进行配置。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/171345c261bb06ea?w=2868&h=1436&f=png&s=330371" alt=""></p>
+<h3 id="构建环境"><a href="#构建环境" class="headerlink" title="构建环境"></a>构建环境</h3><p>构建环境选择node环境<br><img src="https://user-gold-cdn.xitu.io/2020/4/1/17134893615d79e3?w=1888&h=936&f=png&s=154892" alt=""></p>
+<h3 id="构建"><a href="#构建" class="headerlink" title="构建"></a>构建</h3><p>配置node打包命令，打包完成后将压缩后的dist文件上传到远程服务器上，<code>remote directory</code>是移除<code>static</code>下的文件，这边的webserver目录就是一开始编写的目录里<br><img src="https://user-gold-cdn.xitu.io/2020/4/1/17134827ac977f55?w=2880&h=1560&f=png&s=320054" alt=""><br>此时，我们的配置也算是告一段落了，点击保存。修改代码，<code>git push</code> ，你会发现项目已经自动开始构建了😊</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/1713487d8a8b008e?w=2548&h=1146&f=png&s=205522" alt=""></p>
+<h2 id="❤️感谢大家"><a href="#❤️感谢大家" class="headerlink" title="❤️感谢大家"></a>❤️感谢大家</h2><p>1.如果文章对你有帮助，请动动你的小手指点个赞👍吧，你的赞是我创作的动力。</p>
+<p>2.关注公众号「前端精英」！不定期推送高质量文章哦。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2020/4/1/1713494fd88fbb7d?w=738&h=720&f=png&s=289936" alt=""></p>
 
             </div>
             <hr/>
@@ -559,7 +643,7 @@ a<span class="token punctuation">.</span><span class="token function">checkName<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.wangyhn.com/2019/12/23/js-you-ya-xie-fa-zong-jie/">http://www.wangyhn.com/2019/12/23/js-you-ya-xie-fa-zong-jie/</a>
+                    <a href="http://www.wangyhn.com/2020/04/02/xiao-bai-du-neng-kan-dong-de-qian-duan-bu-shu-docker-nginx-jenkins/">http://www.wangyhn.com/2020/04/02/xiao-bai-du-neng-kan-dong-de-qian-duan-bu-shu-docker-nginx-jenkins/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -597,8 +681,8 @@ a<span class="token punctuation">.</span><span class="token function">checkName<
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/javascript/">
-                                    <span class="chip bg-color">javascript</span>
+                                <a href="/tags/skill/">
+                                    <span class="chip bg-color">skill</span>
                                 </a>
                             
                         </div>
@@ -769,7 +853,7 @@ a<span class="token punctuation">.</span><span class="token function">checkName<
         repo: 'gitalk',
         owner: 'YaleWan',
         admin: "YaleWan",
-        id: '2019-12-23T18-17-14',
+        id: '2020-04-02T09-12-59',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -790,31 +874,81 @@ a<span class="token punctuation">.</span><span class="token function">checkName<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/12/23/git/">
+                <a href="/2020/04/02/xiao-bai-du-neng-kan-dong-de-qian-duan-bu-shu-docker-nginx-jenkins/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="git">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="小白都能看懂的前端部署（docker+nginx+jenkins）">
                         
-                        <span class="card-title">git</span>
+                        <span class="card-title">小白都能看懂的前端部署（docker+nginx+jenkins）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git的相关知识点git reset
-git reset 的作用是修改HEAD的位置，即将HEAD指向的位置 改变为之前存在的某个版本，如果想恢复到之前的某个提交的版本，且那个版本之后的提交的版本不要了，可以使用。
-是比较强硬的回退，如果没
+                            
+前言随着devops的发展，前端部署变得越来越简单，可控性也越来越高，本文基于docker🐳+nginx+jenkins来实现前端自动化部署流程，具体实现效果为开发人员在本地开发，开发push提交代码到指定分支，😊自动触发jenkin
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/skill/" class="post-category">
+                                    skill
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/skill/">
+                        <span class="chip bg-color">skill</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/12/27/gitlab-ci/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="gitlab-ci">
+                        
+                        <span class="card-title">gitlab-ci</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            简介持续集成(Continuous integration，简称CI)是一种软件开发实践，即团队开发成员经常集成他们的工作，通常每个成员每天至少集成一次，也就意味着每天可能会发生多次集成。 每次集成都通过自动化的构建（包括编译，发布，自动化
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -830,60 +964,8 @@ git reset 的作用是修改HEAD的位置，即将HEAD指向的位置 改变为�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="JavaScript中打乱数组排序">
-                        
-                        <span class="card-title">JavaScript中打乱数组排序</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            JavaScript中打乱数组排序
-利用sort()函数
-arr.sort(()=>Math.random() - 0.5)
-但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-23
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/alg/" class="post-category">
-                                    alg
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/alg/">
-                        <span class="chip bg-color">alg</span>
+                    <a href="/tags/skill/">
+                        <span class="chip bg-color">skill</span>
                     </a>
                     
                 </div>
