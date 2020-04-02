@@ -106,31 +106,6 @@
     
     
     <entry>
-      <title>事件总线bus解决兄弟组件之间的传值</title>
-      <link href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/"/>
-      <url>/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/</url>
-      
-        <content type="html"><![CDATA[<h2 id="事件总线bus解决兄弟组件之间的传值"><a href="#事件总线bus解决兄弟组件之间的传值" class="headerlink" title="事件总线bus解决兄弟组件之间的传值"></a>事件总线bus解决兄弟组件之间的传值</h2><p>实际运用：</p><p>封装一个<code>Bus.js</code></p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token keyword">const</span> Bus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">export</span> <span class="token keyword">default</span> Bus </code></pre><p>在组件调用时引入</p><p>组件一：</p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Bus <span class="token keyword">from</span> <span class="token string">'./Bus'</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token keyword">return</span> <span class="token punctuation">{</span>        <span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>      <span class="token operator">...</span><span class="token punctuation">.</span>      Bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'log'</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token punctuation">}</span></code></pre><p>组件二：</p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Bus <span class="token keyword">from</span> <span class="token string">'./Bus'</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token keyword">return</span> <span class="token punctuation">{</span>        <span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      Bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'log'</span><span class="token punctuation">,</span> content <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> vue </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>找出字符串中连续出现最多的字符和个数</title>
       <link href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/"/>
       <url>/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/</url>
@@ -148,6 +123,31 @@
         <tags>
             
             <tag> alg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>事件总线bus解决兄弟组件之间的传值</title>
+      <link href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/"/>
+      <url>/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="事件总线bus解决兄弟组件之间的传值"><a href="#事件总线bus解决兄弟组件之间的传值" class="headerlink" title="事件总线bus解决兄弟组件之间的传值"></a>事件总线bus解决兄弟组件之间的传值</h2><p>实际运用：</p><p>封装一个<code>Bus.js</code></p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token keyword">const</span> Bus <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">export</span> <span class="token keyword">default</span> Bus </code></pre><p>在组件调用时引入</p><p>组件一：</p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Bus <span class="token keyword">from</span> <span class="token string">'./Bus'</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token keyword">return</span> <span class="token punctuation">{</span>        <span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>      <span class="token operator">...</span><span class="token punctuation">.</span>      Bus<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'log'</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>  <span class="token punctuation">}</span></code></pre><p>组件二：</p><pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Bus <span class="token keyword">from</span> <span class="token string">'./Bus'</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      <span class="token keyword">return</span> <span class="token punctuation">{</span>        <span class="token operator">...</span><span class="token operator">...</span><span class="token operator">...</span>      <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">,</span>    mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>      Bus<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'log'</span><span class="token punctuation">,</span> content <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>      <span class="token punctuation">}</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
             
         </tags>
       
@@ -331,31 +331,6 @@
     
     
     <entry>
-      <title>js 优雅写法总结</title>
-      <link href="/2019/12/23/js-you-ya-xie-fa-zong-jie/"/>
-      <url>/2019/12/23/js-you-ya-xie-fa-zong-jie/</url>
-      
-        <content type="html"><![CDATA[<h1 id="js优雅写法"><a href="#js优雅写法" class="headerlink" title="js优雅写法"></a>js优雅写法</h1><ul><li><p>封装多个函数</p><p>传统写法</p><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">checkEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">checkPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre><p>优雅写法</p><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> checkType <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token keyword">this</span><span class="token punctuation">.</span>addCheck <span class="token operator">=</span> <span class="token punctuation">(</span>type <span class="token punctuation">,</span>fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    <span class="token keyword">this</span><span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> fn<span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> check <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">checkType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>check<span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkName'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkName'</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkPsw'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkPsw'</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>a<span class="token punctuation">.</span><span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkPsw</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> javascript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> javascript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>git</title>
       <link href="/2019/12/23/git/"/>
       <url>/2019/12/23/git/</url>
@@ -373,6 +348,31 @@
         <tags>
             
             <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js 优雅写法总结</title>
+      <link href="/2019/12/23/js-you-ya-xie-fa-zong-jie/"/>
+      <url>/2019/12/23/js-you-ya-xie-fa-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="js优雅写法"><a href="#js优雅写法" class="headerlink" title="js优雅写法"></a>js优雅写法</h1><ul><li><p>封装多个函数</p><p>传统写法</p><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">checkEmail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token keyword">function</span> <span class="token function">checkPassword</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre><p>优雅写法</p><pre class=" language-js"><code class="language-js"><span class="token keyword">let</span> checkType <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  <span class="token keyword">this</span><span class="token punctuation">.</span>addCheck <span class="token operator">=</span> <span class="token punctuation">(</span>type <span class="token punctuation">,</span>fn<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    <span class="token keyword">this</span><span class="token punctuation">[</span>type<span class="token punctuation">]</span> <span class="token operator">=</span> fn<span class="token punctuation">;</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">let</span> check <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">checkType</span><span class="token punctuation">(</span><span class="token punctuation">)</span>check<span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkName'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkName'</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addCheck</span><span class="token punctuation">(</span><span class="token string">'checkPsw'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'this is checkPsw'</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>a<span class="token punctuation">.</span><span class="token function">checkName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">checkPsw</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> javascript </tag>
             
         </tags>
       
