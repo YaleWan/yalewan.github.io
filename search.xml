@@ -131,31 +131,6 @@
     
     
     <entry>
-      <title>找出字符串中连续出现最多的字符和个数</title>
-      <link href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/"/>
-      <url>/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/</url>
-      
-        <content type="html"><![CDATA[<h1 id="找出字符串中连续出现最多的字符和个数"><a href="#找出字符串中连续出现最多的字符和个数" class="headerlink" title="找出字符串中连续出现最多的字符和个数"></a>找出字符串中连续出现最多的字符和个数</h1><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> arr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/(\w)\1*/g</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> maxLen <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>s <span class="token operator">=</span><span class="token operator">></span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pre<span class="token punctuation">,</span> curr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>  <span class="token keyword">if</span> <span class="token punctuation">(</span>curr<span class="token punctuation">.</span>length <span class="token operator">===</span> maxLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>    pre<span class="token punctuation">[</span>curr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> curr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token punctuation">}</span>  <span class="token keyword">return</span> pre<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> alg </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> alg </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>事件总线bus解决兄弟组件之间的传值</title>
       <link href="/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/"/>
       <url>/2019/12/23/zong-xian-bus-jie-jue-xiong-di-zu-jian-chuan-zhi/</url>
@@ -173,6 +148,31 @@
         <tags>
             
             <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>找出字符串中连续出现最多的字符和个数</title>
+      <link href="/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/"/>
+      <url>/2019/12/23/zhao-chu-zi-fu-chuan-zhong-lian-xu-chu-xian-zui-duo-de-zi-fu-he-ge-shu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="找出字符串中连续出现最多的字符和个数"><a href="#找出字符串中连续出现最多的字符和个数" class="headerlink" title="找出字符串中连续出现最多的字符和个数"></a>找出字符串中连续出现最多的字符和个数</h1><pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> arr <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/(\w)\1*/g</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> maxLen <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span><span class="token operator">...</span>arr<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>s <span class="token operator">=</span><span class="token operator">></span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">const</span> result <span class="token operator">=</span> arr<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span>pre<span class="token punctuation">,</span> curr<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>  <span class="token keyword">if</span> <span class="token punctuation">(</span>curr<span class="token punctuation">.</span>length <span class="token operator">===</span> maxLen<span class="token punctuation">)</span> <span class="token punctuation">{</span>    pre<span class="token punctuation">[</span>curr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> curr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token punctuation">}</span>  <span class="token keyword">return</span> pre<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> alg </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> alg </tag>
             
         </tags>
       
@@ -406,31 +406,6 @@
     
     
     <entry>
-      <title>JavaScript中打乱数组排序</title>
-      <link href="/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/"/>
-      <url>/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/</url>
-      
-        <content type="html"><![CDATA[<h1 id="JavaScript中打乱数组排序"><a href="#JavaScript中打乱数组排序" class="headerlink" title="JavaScript中打乱数组排序"></a>JavaScript中打乱数组排序</h1><ul><li><p>利用sort()函数</p><pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">)</span></code></pre><p>但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。</p></li><li><p>Fisher-Yates shuffle(洗牌算法)</p><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token keyword">let</span> i <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> j <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>    arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> idx<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>        <span class="token keyword">const</span> targetIdx <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span>        <span class="token punctuation">;</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> arr<span class="token punctuation">}</span></code></pre><p>如果要将数组随机排序，目前而言，Fisher–Yates shuffle 算法应该是最好的选择。</p></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> alg </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> alg </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>flex弹性布局</title>
       <link href="/2019/12/23/flex-dan-xing-bu-ju/"/>
       <url>/2019/12/23/flex-dan-xing-bu-ju/</url>
@@ -448,6 +423,31 @@
         <tags>
             
             <tag> html </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JavaScript中打乱数组排序</title>
+      <link href="/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/"/>
+      <url>/2019/12/23/javascript-zhong-da-luan-shu-zu-sui-ji-pai-xu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JavaScript中打乱数组排序"><a href="#JavaScript中打乱数组排序" class="headerlink" title="JavaScript中打乱数组排序"></a>JavaScript中打乱数组排序</h1><ul><li><p>利用sort()函数</p><pre class=" language-js"><code class="language-js">arr<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">0.5</span><span class="token punctuation">)</span></code></pre><p>但是这种排序由于v8引擎中针对短数组和长数组使用了不同的排序方法。并且sort方法中对于同一组a,b值需要总是返回相同的值。</p></li><li><p>Fisher-Yates shuffle(洗牌算法)</p><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token keyword">let</span> i <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>  <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> j <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre><pre class=" language-js"><code class="language-js"><span class="token keyword">function</span> <span class="token function">shuffle</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token punctuation">{</span>    arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span>_<span class="token punctuation">,</span> idx<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>        <span class="token keyword">const</span> targetIdx <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">)</span>        <span class="token punctuation">;</span><span class="token punctuation">[</span>arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>arr<span class="token punctuation">[</span>targetIdx<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">]</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> arr<span class="token punctuation">}</span></code></pre><p>如果要将数组随机排序，目前而言，Fisher–Yates shuffle 算法应该是最好的选择。</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> alg </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> alg </tag>
             
         </tags>
       
